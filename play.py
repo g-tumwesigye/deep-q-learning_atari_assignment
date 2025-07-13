@@ -19,13 +19,13 @@ def install_atari():
         exit()
 
 def play_model(model_path="models/dqn_model_cnn.zip"):
-    install_atari()  # Ensure packages are installed
+    install_atari() 
     
     try:
-        # Try modern ALE first
+        # Trying ALE first
         env = gym.make("ALE/Breakout-v5", render_mode="human")
     except:
-        # Fallback to classic version
+        # classic version
         env = gym.make("Breakout-v4", render_mode="human")
     
     model = DQN.load(model_path, env=env)
