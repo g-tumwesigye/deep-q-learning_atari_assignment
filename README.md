@@ -1,4 +1,3 @@
-```markdown
 # Deep Q-Learning With Atari: Breakout-v4
 
 This project implements Deep Q-Learning (DQN) agents using both **CNN (Convolutional Neural Network)** and **MLP (Multi-Layer Perceptron)** policies to play the Atari game **Breakout-v4**. The primary objective is to train reinforcement learning agents that learn to play the game effectively using different policy architectures and compare their performance.
@@ -95,7 +94,7 @@ It will generate a `.gif` or `.mp4` of the gameplay in the root directory.
 
 ---
 
-## 🧑‍💻 Team Responsibilities
+## Team Responsibilities
 
 | Name                | Role                                                       |
 | ------------------- | ---------------------------------------------------------- |
