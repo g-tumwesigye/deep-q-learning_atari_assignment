@@ -145,15 +145,4 @@ Please refer to [`models/README.md`](models/README.md) for:
 
 ---
 
-## Final Output
-
-* Trained DQN models
-* Gameplay recording 
-* Codebase for reproducibility
-* Clean documentation
-* Presentation-ready material
-
----
-
-
 ```
