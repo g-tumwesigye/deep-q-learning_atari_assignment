@@ -144,5 +144,12 @@ Please refer to [`models/README.md`](models/README.md) for:
 * Notes on CNN vs MLP performance
 
 ---
+---
 
-```
+## Video Demo
+
+Watch the agent playing Breakout-v4 (loaded from `play.py`):
+
+🔗 [Click to Watch the Gameplay Video](https://drive.google.com/file/d/your_video_id_here/view)
+
+---
