@@ -1,6 +1,10 @@
-# Deep Q-Learning With Atari: Breakout-v4
+# Deep Q-Learning with Atari: Breakout-v4
 
-This project implements Deep Q-Learning (DQN) agents using both **CNN (Convolutional Neural Network)** and **MLP (Multi-Layer Perceptron)** policies to play the Atari game **Breakout-v4**. The primary objective is to train reinforcement learning agents that learn to play the game effectively using different policy architectures and compare their performance.
+This project demonstrates Deep Q-Learning (DQN) using **Stable Baselines3** to train an agent to play **Breakout-v4**, an Atari environment from Gymnasium.
+
+We trained and compared two policy networks:
+- `CnnPolicy` – uses convolutional layers (image-based)
+- `MlpPolicy` – uses fully connected layers (less suitable for images)
 
 ---
 
@@ -25,8 +29,9 @@ deep-q-learning_atari_assignment/
 ---
 
 ## Key Details
-
-- **Environment**: `Breakout-v4` (via `gymnasium`)
+- **Environment:** `Breakout-v4`
+- **Library:** Gymnasium + Stable Baselines3
+- **Framework:** PyTorch (via SB3)
 - **Libraries Used**:
   - `stable-baselines3`
   - `gymnasium`
@@ -39,6 +44,17 @@ deep-q-learning_atari_assignment/
 
 ---
 
+## DQN agent summary
+
+We implemented and trained a DQN agent using two policy types:
+
+| Policy      | Performance Notes                                           |
+|-------------|-------------------------------------------------------------|
+| `CnnPolicy` | Performed significantly better, learns spatial patterns     |
+| `MlpPolicy` | Poor performance, lacks ability to process image inputs     |
+
+➡ The CNN-based model (`dqn_model_cnn.zip`) is used in `play.py`.
+
 ## Summary of Findings
 
 - **CNNPolicy outperformed MLPPolicy** significantly in both average reward and episode length.
@@ -46,6 +62,14 @@ deep-q-learning_atari_assignment/
 - MLP-based training was included for comparison and learning purposes.
 
 ---
+
+Hyperparameter Tuning Table
+
+| Hyperparameter Set | Learning Rate | Gamma | Batch Size | Epsilon (start → end, decay) | Observed Behavior |
+|--------------------|---------------|-------|------------|-------------------------------|-------------------|
+| Set 1              | 0.0001        | 0.99  | 32         | 1.0 → 0.1, 100000 steps        | Stable reward increase, slow learning |
+| Set 2              | 0.0005        | 0.98  | 64         | 1.0 → 0.05, 50000 steps        | Improved exploration, faster convergence |
+| Set 3              | 0.001         | 0.95  | 32         | 0.9 → 0.1, 20000 steps   
 
 ## How to Run
 
@@ -56,13 +80,16 @@ git clone https://github.com/g-tumwesigye/deep-q-learning_atari_assignment.git
 cd deep-q-learning_atari_assignment
 ````
 
-### 2. Download the Pretrained Models
+### 2. Install dependencies
+pip install stable-baselines3[extra] gymnasium[atari] torch imageio
+
+### 3. Download the Pretrained Models
 
 Due to GitHub’s file size limits, the trained `.zip` models are not included in the repo.
 
 > Go to [`models/README.md`](models/README.md) for download links.
 
-Place both `.zip` files into the `models/` folder.
+Please manually download and place them in models/
 
 ### 3. Install Dependencies
 
