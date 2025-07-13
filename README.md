@@ -53,7 +53,7 @@ We implemented and trained a DQN agent using two policy types:
 | `CnnPolicy` | Performed significantly better, learns spatial patterns     |
 | `MlpPolicy` | Poor performance, lacks ability to process image inputs     |
 
-➡ The CNN-based model (`dqn_model_cnn.zip`) is used in `play.py`.
+The CNN-based model (`dqn_model_cnn.zip`) is used in `play.py`.
 
 ## Summary of Findings
 
