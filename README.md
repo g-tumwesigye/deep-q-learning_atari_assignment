@@ -7,16 +7,19 @@ This project implements Deep Q-Learning (DQN) agents using both **CNN (Convoluti
 ##  Project Structure
 
 ```
-
-deep-q-learning\_atari\_assignment/
-│
-├── models/
-│   ├── README.md              
-│
-├── train.py                  
-├── train\_mlp.py               
-├── play.py                    
-├── README.md                  
+deep-q-learning_atari_assignment/
+├── README.md 
+├── train.py 
+├── train_mlp.py 
+├── play.py 
+├── evaluation.log 
+├── dqn_tensorboard/
+│ └── DQN_1/
+│ └── events.out.tfevents.*
+├── models/ 
+│ ├── README.md
+│ ├── dqn_model_cnn.zip 
+│ └── dqn_model_mlp.zip             
 ````
 
 ---
@@ -101,7 +104,7 @@ It will generate a `.gif` or `.mp4` of the gameplay in the root directory.
 | **Geofrey**         | Model training (CNN & MLP), repo setup, evaluation summary |
 | **Justice**         | Implemented `play.py`, test & record gameplay                |
 | **Steven**          | Analyzed & compared CNN vs MLP performance                   |
-| **Peter**           | Recorded the hyperparameter configs & prepared the README.d           |
+| **Peter**           | Recorded the hyperparameter configs & prepared the README.md           |
 
 
 ---
