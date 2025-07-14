@@ -1,12 +1,6 @@
 # Deep Q-Learning with Atari: Breakout-v4
 
-This project demonstrates Deep Q-Learning (DQN) using **Stable Baseli### 5. Run and Record Gameplay
-
-Once `play.py` is implemented, you'll be able to run:
-
-```bash
-.\.venv\Scripts\python.exe play.py
-```to train an agent to play **Breakout-v4**, an Atari environment from Gymnasium.
+This project demonstrates Deep Q-Learning (DQN) using **Stable Baselines3** to train an agent to play **Breakout-v4**, an Atari environment from Gymnasium.
 
 We trained and compared two policy networks:
 - `CnnPolicy` – uses convolutional layers (image-based)
@@ -35,7 +29,7 @@ deep-q-learning_atari_assignment/
 ---
 
 ## Key Details
-- **Environment:** `ALE/Breakout-v5`
+- **Environment:** `Breakout-v4`
 - **Library:** Gymnasium + Stable Baselines3
 - **Framework:** PyTorch (via SB3)
 - **Libraries Used**:
@@ -114,8 +108,8 @@ pip install stable-baselines3[extra] gymnasium[atari] imageio
 To retrain from scratch:
 
 ```bash
-.\.venv\Scripts\python.exe train.py       
-.\.venv\Scripts\python.exe train_mlp.py   
+python train.py       
+python train_mlp.py   
 ```
 
 ### 5. Run and Record Gameplay
