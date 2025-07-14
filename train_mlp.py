@@ -1,10 +1,14 @@
 import gymnasium as gym
 from stable_baselines3 import DQN
 from stable_baselines3.common.monitor import Monitor
+from stable_baselines3.common.atari_wrappers import AtariWrapper
+import ale_py  # Required for ALE environments
 
-# creating the environment
-env_id = "Breakout-v4"
-env = Monitor(gym.make(env_id, render_mode='rgb_array'))
+# creating the environment with Atari wrappers
+env_id = "ALE/Breakout-v5"
+env = gym.make(env_id, render_mode='rgb_array')
+env = AtariWrapper(env)  # Applies frame stacking, resizing, etc.
+env = Monitor(env)
 
 # Training a DQN agent using MlpPolicy for comparison
 model_mlp = DQN(
@@ -13,6 +17,7 @@ model_mlp = DQN(
     learning_rate=0.0001,
     gamma=0.99,
     batch_size=32,
+    buffer_size=10_000,  # Reduced buffer size to avoid memory issues
     exploration_initial_eps=1.0,
     exploration_final_eps=0.1,
     exploration_fraction=0.1,

@@ -1,0 +1,14 @@
+stable-baselines3[extra]
+gymnasium[atari]
+imageio
+torch
+numpy
+matplotlib
+opencv-python
+pygame
+tensorboard
+psutil
+pandas
+cloudpickle
+rich
+ale-py

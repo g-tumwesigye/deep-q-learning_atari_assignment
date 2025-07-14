@@ -1,5 +1,6 @@
 from stable_baselines3 import DQN
 import gymnasium as gym
+import ale_py  # Required for ALE environments
 import time
 import numpy as np
 import sys
@@ -18,15 +19,17 @@ def install_atari():
         print("Please restart the script after installation.")
         exit()
 
-def play_model(model_path="models/dqn_model_cnn.zip"):
+def play_model(model_path="models/dqn_model.zip"):
     install_atari() 
     
     try:
-        # Trying ALE first
+        # Using the same environment as training with AtariWrapper
+        from stable_baselines3.common.atari_wrappers import AtariWrapper
         env = gym.make("ALE/Breakout-v5", render_mode="human")
-    except:
-        # classic version
-        env = gym.make("Breakout-v4", render_mode="human")
+        env = AtariWrapper(env)  # Apply the same wrappers as training
+    except Exception as e:
+        print(f"Error creating environment: {e}")
+        return
     
     model = DQN.load(model_path, env=env)
     
