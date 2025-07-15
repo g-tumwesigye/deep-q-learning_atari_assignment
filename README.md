@@ -3,8 +3,8 @@
 This project demonstrates Deep Q-Learning (DQN) using **Stable Baselines3** to train an agent to play **Breakout-v4**, an Atari environment from Gymnasium.
 
 We trained and compared two policy networks:
-- `CnnPolicy` – uses convolutional layers (image-based)
-- `MlpPolicy` – uses fully connected layers (less suitable for images)
+- `CnnPolicy` – uses convolutional layers
+- `MlpPolicy` – uses fully connected layers 
 
 ---
 
