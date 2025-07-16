@@ -55,6 +55,8 @@ We implemented and trained a DQN agent using two policy types:
 
 The CNN-based model (`dqn_model_cnn.zip`) is used in `play.py`.
 
+---
+
 ## Summary of Findings
 
 - **CNNPolicy outperformed MLPPolicy** significantly in both average reward and episode length.
@@ -63,13 +65,16 @@ The CNN-based model (`dqn_model_cnn.zip`) is used in `play.py`.
 
 ---
 
-Hyperparameter Tuning Table
+### Hyperparameter Tuning Table
 
-| Hyperparameter Set | Learning Rate | Gamma | Batch Size | Epsilon (start → end, decay) | Observed Behavior |
-|--------------------|---------------|-------|------------|-------------------------------|-------------------|
-| Set 1              | 0.0001        | 0.99  | 32         | 1.0 → 0.1, 100000 steps        | Stable reward increase, slow learning |
-| Set 2              | 0.0005        | 0.98  | 64         | 1.0 → 0.05, 50000 steps        | Improved exploration, faster convergence |
-| Set 3              | 0.001         | 0.95  | 32         | 0.9 → 0.1, 20000 steps   
+| Hyperparameter Set | Learning Rate | Gamma | Batch Size | Epsilon (start → end, decay) | Observed Behavior                                |
+|--------------------|---------------|--------|------------|-------------------------------|--------------------------------------------------|
+| Set 1              | 0.0001        | 0.99   | 32         | 1.0 → 0.1, 100000 steps        | Stable reward increase, slow learning            |
+| Set 2              | 0.0005        | 0.98   | 64         | 1.0 → 0.05, 50000 steps        | Improved exploration, faster convergence         |
+| Set 3              | 0.001         | 0.95   | 32         | 0.9 → 0.1, 20000 steps         | Learning too aggressive, less stability          |
+| Set 4 (Peter)      | 0.0003        | 0.97   | 64         | 1.0 → 0.05, 30000 steps        | Moderate improvement, smooth reward progression  |
+
+---
 
 ## How to Run
 
@@ -131,7 +136,7 @@ It will generate a `.gif` or `.mp4` of the gameplay in the root directory.
 | **Geofrey**         | Model training (CNN & MLP), repo setup, evaluation summary |
 | **Justice**         | Implemented `play.py`, test & record gameplay                |
 | **Steven**          | Analyzed & compared CNN vs MLP performance                   |
-| **Peter**           | Recorded the hyperparameter configs & prepared the README.md           |
+| **Peter**           | Recorded the hyperparameter configs, fine tuned Set 4 & prepared the README.md |
 
 
 ---
