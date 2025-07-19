@@ -75,6 +75,8 @@ The CNN-based model (`dqn_model_cnn.zip`) is used in `play.py`.
 | Set 3              | 0.001         | 0.95   | 32         | 0.9 → 0.1, 20000 steps         | Learning too aggressive, less stability          |
 | Set 4 (Peter)      | 0.0003        | 0.97   | 64         | 1.0 → 0.05, 30000 steps        | Moderate improvement, smooth reward progression  |
 
+We've compiled this table to illustrate how adjusting various settings impacts our model. While you might notice that "Set 1" led to "slow learning," we prefer it because it gave us a "stable reward increase." This stability, which we achieved by using a very careful learning rate, a high gamma (meaning we're thinking long-term), and a slow, steady decay for our exploration strategy (epsilon), all these point to a really solid and robust learning process. For us, that consistent and reliable long-term performance is far more important than just getting a quick, but potentially unstable, result.
+
 ---
 
 ## How to Run
