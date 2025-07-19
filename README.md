@@ -55,7 +55,7 @@ We implemented and trained a DQN agent using two policy types:
 
 The CNN-based model (`dqn_model_cnn.zip`) is used in `play.py`.
 
-![Your Alt Text](models/Model Comparison.png)
+![Your Alt Text](models/Model%20Comparison.png)
 ---
 
 ## Summary of Findings
