@@ -136,7 +136,7 @@ It will generate a `.gif` or `.mp4` of the gameplay in the root directory.
 
 | Name                | Role                                                       |
 | ------------------- | ---------------------------------------------------------- |
-| **Geofrey**         | Model training (CNN & MLP), repo setup, evaluation summary |
+| **Geofrey**         | Model training (CNN & MLP), repo setup                       |
 | **Justice**         | Implemented `play.py`, test & record gameplay                |
 | **Steven**          | Analyzed & compared CNN vs MLP performance                   |
 | **Peter**           | Recorded the hyperparameter configs, fine tuned Set 4 & prepared the README.md |
