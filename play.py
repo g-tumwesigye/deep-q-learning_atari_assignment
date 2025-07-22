@@ -26,7 +26,7 @@ def play_model(model_path="models/dqn_model.zip"):
         # Using the same environment as training with AtariWrapper
         from stable_baselines3.common.atari_wrappers import AtariWrapper
         env = gym.make("ALE/Breakout-v5", render_mode="human")
-        env = AtariWrapper(env)  # Apply the same wrappers as training
+        env = AtariWrapper(env)  
     except Exception as e:
         print(f"Error creating environment: {e}")
         return
