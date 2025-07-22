@@ -1,6 +1,6 @@
 # Deep Q-Learning with Atari: Breakout-v4
 
-This project demonstrates Deep Q-Learning (DQN) using **Stable Baselines3** to train an agent to play **Breakout-v4**, an Atari environment from Gymnasium.
+This project demonstrates Deep Q-Learning (DQN) using **Stable Baselines3** to train an agent to play **ALE/Breakout-v5**, an Atari environment from Gymnasium.
 
 We trained and compared two policy networks:
 - `CnnPolicy` – uses convolutional layers
@@ -29,7 +29,7 @@ deep-q-learning_atari_assignment/
 ---
 
 ## Key Details
-- **Environment:** `Breakout-v4`
+- **Environment:** `ALE/Breakout-v5`
 - **Library:** Gymnasium + Stable Baselines3
 - **Framework:** PyTorch (via SB3)
 - **Libraries Used**:
