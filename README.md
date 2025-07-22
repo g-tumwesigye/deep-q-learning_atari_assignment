@@ -1,4 +1,4 @@
-# Deep Q-Learning with Atari: Breakout-v4
+# Deep Q-Learning with Atari: Breakout-v5
 
 This project demonstrates Deep Q-Learning (DQN) using **Stable Baselines3** to train an agent to play **ALE/Breakout-v5**, an Atari environment from Gymnasium.
 
